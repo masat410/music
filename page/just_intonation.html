@@ -3,69 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ドイツ音名と音の単位</title>
+    <title>純正律とは</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="pagestyle.css">
     <link rel="icon" href="../assets/image/favicon.png" type="image/x-icon">
 </head>
 <body>
 <header>
-    <h1>ドイツ音名と音の単位</h1>
+    <h1>純正律とは</h1>
 </header>
 <main>
     <div class="section1">
-        <h2>(1)ドイツ音名について</h2>
+        <h2>(1)平均率と純正律</h2>
+        <p>
+            簡単に言うと、平均率はすべ手の音の間隔が等しく100セントで、
+            純正律は少しずれています。
+            なぜずれているのかは後で説明します。
+        </p>
+        <h3>442Hzを基準としたCの音階の周波数</h3>
+        <span>数字が書いてあるマスをタップすると実際にその音が鳴ります</span><br>
+        <span>純正律と平均率でわずかに違うのがわかりますか?</span>
         <table>
             <tr>
-                <th>階名</th>
-                <th>ド</th>
-                <th>ド♯/レ♭</th>
-                <th>レ</th>
-                <th>レ♯/ミ♭</th>
-                <th>ミ</th>
-                <th>ファ</th>
-                <th>ファ♯/ソ♭</th>
-                <th>ソ</th>
-                <th>ソ♯/ラ♭</th>
-                <th>ラ</th>
-                <th>ラ♯/シ♭</th>
-                <th>シ</th>
+                <th>音名</th>
+                <th>周波数 (Hz) - 平均律</th>
+                <th>周波数 (Hz) - 純正律</th>
             </tr>
             <tr>
-                <td>ドイツ音名</td>
                 <td>C</td>
-                <td>Cis/Des</td>
-                <td>D</td>
-                <td>Dis/Es</td>
-                <td>E</td>
-                <td>F</td>
-                <td>Fis/Ges</td>
-                <td>G</td>
-                <td>Gis/As</td>
-                <td>A</td>
-                <td>Ais/B</td>
-                <td>H</td>
+                <td class="clickable" onclick="playSound(442.00)">442.00</td>
+                <td class="clickable" onclick="playSound(442.00)">442.00</td>
             </tr>
             <tr>
-                <td>英語音名</td>
-                <td>C</td>
-                <td>C♯/D♭</td>
+                <td>C#</td>
+                <td class="clickable" onclick="playSound(468.12)">468.12</td>
+                <td class="clickable" onclick="playSound(468.14)">468.14</td>
+            </tr>
+            <tr>
                 <td>D</td>
-                <td>D♯/E♭</td>
+                <td class="clickable" onclick="playSound(495.53)">495.53</td>
+                <td class="clickable" onclick="playSound(495.00)">495.00</td>
+            </tr>
+            <tr>
+                <td>D#</td>
+                <td class="clickable" onclick="playSound(524.29)">524.29</td>
+                <td class="clickable" onclick="playSound(524.25)">524.25</td>
+            </tr>
+            <tr>
                 <td>E</td>
+                <td class="clickable" onclick="playSound(554.44)">554.44</td>
+                <td class="clickable" onclick="playSound(554.37)">554.37</td>
+            </tr>
+            <tr>
                 <td>F</td>
-                <td>F♯/G♭</td>
+                <td class="clickable" onclick="playSound(586.06)">586.06</td>
+                <td class="clickable" onclick="playSound(588.27)">588.27</td>
+            </tr>
+            <tr>
+                <td>F#</td>
+                <td class="clickable" onclick="playSound(619.22)">619.22</td>
+                <td class="clickable" onclick="playSound(625.39)">625.39</td>
+            </tr>
+            <tr>
                 <td>G</td>
-                <td>G♯/A♭</td>
+                <td class="clickable" onclick="playSound(654.00)">654.00</td>
+                <td class="clickable" onclick="playSound(661.50)">661.50</td>
+            </tr>
+            <tr>
+                <td>G#</td>
+                <td class="clickable" onclick="playSound(690.47)">690.47</td>
+                <td class="clickable" onclick="playSound(702.14)">702.14</td>
+            </tr>
+            <tr>
                 <td>A</td>
-                <td>A♯/B♭</td>
+                <td class="clickable" onclick="playSound(728.71)">728.71</td>
+                <td class="clickable" onclick="playSound(735.00)">735.00</td>
+            </tr>
+            <tr>
+                <td>A#</td>
+                <td class="clickable" onclick="playSound(768.81)">768.81</td>
+                <td class="clickable" onclick="playSound(787.50)">787.50</td>
+            </tr>
+            <tr>
                 <td>B</td>
+                <td class="clickable" onclick="playSound(810.85)">810.85</td>
+                <td class="clickable" onclick="playSound(830.55)">830.55</td>
             </tr>
         </table>
-        <p>この表はC管の表です。</p>
     </div>
     <div class="section2">
-        <h2>(2)音の単位について</h2>
+        <h2>(2)純正律について</h2>
         <p>
             音の単位には、Hzとセントがあります。
             Hzは理科でやった振動数(周波数)で、セントは半音の百分の一です。
@@ -77,21 +104,6 @@
             簡単に言うと、ドとレの間の周波数とレとミの間の周波数など、
             音の間隔は同じでも、周波数の間隔は同じではないからです。
         </p>
-        <br>
-        <span>(Hz)</span>
-        <div class="number-line">
-            <div class="point" style="left: 0%;"><span class="label">110</span></div>
-            <div class="point" style="left: 7.08%;"><span class="label">220</span></div>
-            <div class="point" style="left: 22.12%;"><span class="label">440</span></div>
-            <div class="point" style="left: 47.30%;"><span class="label">880</span></div>
-            <div class="point" style="left: 92.56%;"><span class="label">1760</span></div>
-        </div>
-        <br><br><br>
-        <small>110Hzは2オクターブ下のド</small><br>
-        <small>220Hzはオクターブ下のド</small><br>
-        <small>440Hzは普通のド</small><br>
-        <small>880Hzはオクターブ上のド</small><br>
-        <small>1760Hzは2オクターブ上のド</small><br>
         <br>
         <p>
             上の数直線のそれぞれの幅がオクターブです。
@@ -113,6 +125,17 @@
         <div id="result"></div>
     </div>
     <a href="../index.html" class="btn btn-flat"><span>もどる</span></a>
+    <script>
+        function playSound(frequency) {
+            const context = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator = context.createOscillator();
+            oscillator.type = 'sine';
+            oscillator.frequency.setValueAtTime(frequency, context.currentTime);
+            oscillator.connect(context.destination);
+            oscillator.start();
+            oscillator.stop(context.currentTime + 1); // 1秒間音を鳴らす
+        }
+    </script>
     <script>
         const quiz = [
             {
