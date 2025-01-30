@@ -94,3 +94,10 @@ a.btn-flat{
 .btn-flat:hover {
     background-color: #2d762e;
 }
+.sound{
+    background-color: #4CAF50;
+    color: white;
+    padding : 10px 30px;
+    margin: 20px;
+    border-radius: 50px;
+}
