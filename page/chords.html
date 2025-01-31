@@ -37,7 +37,7 @@
             和音で、微妙に音程がずれているとうなりが発生します。
         </p>
         <div style="display:flex;justify-content:space-around;">
-            <img src="../assets/image/スクリーンショット%202025-01-30%20191623.png" style="width:40%">
+            <img alt="Desmosを用いたうなりのグラフ" src="../assets/image/スクリーンショット%202025-01-30%20191623.png" style="width:40%">
             <div>
                 <div class="sound" onClick="playSound('jundomiso')"><span>純正律のドミソ</span></div>
                 <div class="sound" onClick="playSound('heidomiso')"><span>平均律のドミソ</span></div>
@@ -72,7 +72,7 @@
     <a href="../index.html" class="btn btn-flat"><span>もどる</span></a>
     <script>
         function playSound(soundId) {
-            var audio = document.getElementById(soundId);
+            let audio = document.getElementById(soundId);
             audio.play();
         }
         function playSoundo(frequency, secondFrequency = null) {
