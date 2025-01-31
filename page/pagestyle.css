@@ -75,6 +75,9 @@ p{
     font-weight: bold;
 }
 #result{
+    margin-bottom: 5rem;
+}
+#result{
     padding-top: 10px;
     font-size: 1.3rem;
 }
