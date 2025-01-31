@@ -21,149 +21,89 @@
             純正律は少しずれています。
             なぜずれているのかは後で説明します。
         </p>
-        <h3>442Hzを基準としたCの音階の周波数</h3>
+        <h3>音階の周波数</h3>
         <span style="color: red">数字が書いてあるマスをタップすると実際にその音が鳴ります</span><br>
         <span>純正律と平均率でわずかに違うのがわかりますか?</span>
-<!--        <table>-->
-<!--            <tr>-->
-<!--                <th>音名</th>-->
-<!--                <th>周波数 (Hz) - 平均律</th>-->
-<!--                <th>周波数 (Hz) - 純正律</th>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C</td>-->
-<!--                <td class="clickable" onclick="playSound(442.00)">442.00</td>-->
-<!--                <td class="clickable" onclick="playSound(442.00)">442.00</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C#</td>-->
-<!--                <td class="clickable" onclick="playSound(468.12)">468.12</td>-->
-<!--                <td class="clickable" onclick="playSound(468.14)">468.14</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>D</td>-->
-<!--                <td class="clickable" onclick="playSound(495.53)">495.53</td>-->
-<!--                <td class="clickable" onclick="playSound(495.00)">495.00</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>D#</td>-->
-<!--                <td class="clickable" onclick="playSound(524.29)">524.29</td>-->
-<!--                <td class="clickable" onclick="playSound(524.25)">524.25</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>E</td>-->
-<!--                <td class="clickable" onclick="playSound(554.44)">554.44</td>-->
-<!--                <td class="clickable" onclick="playSound(554.37)">554.37</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>F</td>-->
-<!--                <td class="clickable" onclick="playSound(586.06)">586.06</td>-->
-<!--                <td class="clickable" onclick="playSound(588.27)">588.27</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>F#</td>-->
-<!--                <td class="clickable" onclick="playSound(619.22)">619.22</td>-->
-<!--                <td class="clickable" onclick="playSound(625.39)">625.39</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>G</td>-->
-<!--                <td class="clickable" onclick="playSound(654.00)">654.00</td>-->
-<!--                <td class="clickable" onclick="playSound(661.50)">661.50</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>G#</td>-->
-<!--                <td class="clickable" onclick="playSound(690.47)">690.47</td>-->
-<!--                <td class="clickable" onclick="playSound(702.14)">702.14</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>A</td>-->
-<!--                <td class="clickable" onclick="playSound(728.71)">728.71</td>-->
-<!--                <td class="clickable" onclick="playSound(735.00)">735.00</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>A#</td>-->
-<!--                <td class="clickable" onclick="playSound(768.81)">768.81</td>-->
-<!--                <td class="clickable" onclick="playSound(787.50)">787.50</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>B</td>-->
-<!--                <td class="clickable" onclick="playSound(810.85)">810.85</td>-->
-<!--                <td class="clickable" onclick="playSound(830.55)">830.55</td>-->
-<!--            </tr>-->
-<!--        </table>-->
-<!--        <table>-->
-<!--            <tr>-->
-<!--                <th>音階</th>-->
-<!--                <th>純正律の周波数 (Hz)</th>-->
-<!--                <th>平均律の周波数 (Hz)</th>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C</td>-->
-<!--                <td class="clickable" onclick="playSound(442.0)">442.0</td>-->
-<!--                <td class="clickable" onclick="playSound(442.0)">442.0</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C#</td>-->
-<!--                <td class="clickable" onclick="playSound(471.47)">471.47</td>-->
-<!--                <td class="clickable" onclick="playSound(467.2)">467.2</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>D</td>-->
-<!--                <td class="clickable" onclick="playSound(496.5)">496.5</td>-->
-<!--                <td class="clickable" onclick="playSound(496.1)">496.1</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>D#</td>-->
-<!--                <td class="clickable" onclick="playSound(530.4)">530.4</td>-->
-<!--                <td class="clickable" onclick="playSound(524.2)">524.2</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>E</td>-->
-<!--                <td class="clickable" onclick="playSound(552.5)">552.5</td>-->
-<!--                <td class="clickable" onclick="playSound(556.1)">556.1</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>F</td>-->
-<!--                <td class="clickable" onclick="playSound(589.3)">589.3</td>-->
-<!--                <td class="clickable" onclick="playSound(589.4)">589.4</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>F#</td>-->
-<!--                <td class="clickable" onclick="playSound(620.6)">620.6</td>-->
-<!--                <td class="clickable" onclick="playSound(624.2)">624.2</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>G</td>-->
-<!--                <td class="clickable" onclick="playSound(663.0)">663.0</td>-->
-<!--                <td class="clickable" onclick="playSound(661.7)">661.7</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>G#</td>-->
-<!--                <td class="clickable" onclick="playSound(707.2)">707.2</td>-->
-<!--                <td class="clickable" onclick="playSound(700.3)">700.3</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>A</td>-->
-<!--                <td class="clickable" onclick="playSound(736.7)">736.7</td>-->
-<!--                <td class="clickable" onclick="playSound(742.4)">742.4</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>A#</td>-->
-<!--                <td class="clickable" onclick="playSound(796.1)">796.1</td>-->
-<!--                <td class="clickable" onclick="playSound(786.0)">786.0</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>B</td>-->
-<!--                <td class="clickable" onclick="playSound(828.8)">828.8</td>-->
-<!--                <td class="clickable" onclick="playSound(833.4)">833.4</td>-->
-<!--            </tr>-->
-<!--            <tr>-->
-<!--                <td>C</td>-->
-<!--                <td class="clickable" onclick="playSound(884.0)">884.0</td>-->
-<!--                <td class="clickable" onclick="playSound(884.0)">884.0</td>-->
-<!--            </tr>-->
-<!--        </table>-->
-工事中
+
+        <table >
+            <thead>
+            <tr>
+                <th>音階</th>
+                <th>純正律の周波数 (Hz)</th>
+                <th>平均律の周波数 (Hz)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>C</td>
+                <td class="clickable" onclick="playSound(264.83)">264.83</td>
+                <td class="clickable" onclick="playSound(261.63)">261.63</td>
+            </tr>
+            <tr>
+                <td>C#</td>
+                <td class="clickable" onclick="playSound(281.43)">281.43</td>
+                <td class="clickable" onclick="playSound(277.18)">277.18</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td class="clickable" onclick="playSound(295.99)">295.99</td>
+                <td class="clickable" onclick="playSound(293.66)">293.66</td>
+            </tr>
+            <tr>
+                <td>D#</td>
+                <td class="clickable" onclick="playSound(312.31)">312.31</td>
+                <td class="clickable" onclick="playSound(311.13)">311.13</td>
+            </tr>
+            <tr>
+                <td>E</td>
+                <td class="clickable" onclick="playSound(330.24)">330.24</td>
+                <td class="clickable" onclick="playSound(329.63)">329.63</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td class="clickable" onclick="playSound(351.11)">351.11</td>
+                <td class="clickable" onclick="playSound(349.23)">349.23</td>
+            </tr>
+            <tr>
+                <td>F#</td>
+                <td class="clickable" onclick="playSound(370.72)">370.72</td>
+                <td class="clickable" onclick="playSound(369.99)">369.99</td>
+            </tr>
+            <tr>
+                <td>G</td>
+                <td class="clickable" onclick="playSound(393.00)">393.00</td>
+                <td class="clickable" onclick="playSound(391.99)">391.99</td>
+            </tr>
+            <tr>
+                <td>G#</td>
+                <td class="clickable" onclick="playSound(418.50)">418.50</td>
+                <td class="clickable" onclick="playSound(415.30)">415.30</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td class="clickable" onclick="playSound(442.00)">442.00</td>
+                <td class="clickable" onclick="playSound(442.00)">442.00</td>
+            </tr>
+            <tr>
+                <td>A#</td>
+                <td class="clickable" onclick="playSound(469.62)">469.62</td>
+                <td class="clickable" onclick="playSound(466.16)">466.16</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td class="clickable" onclick="playSound(496.53)">496.53</td>
+                <td class="clickable" onclick="playSound(493.88)">493.88</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td class="clickable" onclick="playSound(529.66)">529.66</td>
+                <td class="clickable" onclick="playSound(523.25)">523.25</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+
     </div>
     <div class="section2">
         <h2>(2)純正律について</h2>
