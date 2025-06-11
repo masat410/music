@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-    background-color: #F0FBF3;
+    background-color: var(--white);
 }
 table {
     width: 100%;
@@ -11,12 +11,12 @@ table {
 th, td {
     text-align: center;
     padding: 8px;
-    background-color: #bef3c9;
+    background-color: var(--table-1);
     border-radius: 10px; /* セルごとに丸みを追加 */
     /*border: 1px solid black; !* セルの枠線 *!*/
 }
 th {
-    background-color: #ffecec;
+    background-color: var(--table-2);
 }
 p{
     line-height: 1.2rem;
@@ -37,7 +37,7 @@ p{
     bottom: -10px;
     width: 4px;
     height: 20px;
-    background-color: #155418;
+    background-color: var(--main-more-dark);
 }
 .label {
     position: absolute;
@@ -55,8 +55,8 @@ p{
 }
 .answerButton{
     border: none;
-    background-color: #4CAF50;
-    color: white;
+    background-color: var(--main-color);
+    color: var(--white);
     border-radius: 15px;
     font-size: 16px;
     text-align: center;
@@ -87,18 +87,18 @@ p{
 
 a.btn-flat {
     padding: 1rem 2rem;
-    color: #fff;
-    background: #4CAF50;
+    color: var(--white);
+    background: var(--main-color);
 }
 
 a.btn-flat{
     border-radius: 150px;
 }
 .btn-flat:hover {
-    background-color: #2d762e;
+    background-color: var(--main-dark);
 }
 .sound{
-    background-color: #4CAF50;
+    background-color: var(--main-color);
     color: white;
     padding : 10px 30px;
     margin: 20px;
