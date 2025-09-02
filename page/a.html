@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和音について</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="pagestyle.css">
+    <link rel="icon" href="../assets/image/favicon.png" type="image/x-icon">
+</head>
+<body>
+<header>
+    <h1>和音について</h1>
+</header>
+<main>
+    <div class="section1">
+        <h2>(1)和音について</h2>
+        <p>
+            人間の耳(脳)は周波数の比が簡単な整数の比であらわされる複数の音が混ざり合うと
+            気持ちいいと感じます。逆に、簡単な整数の比であらわせない音が混ざると不協和音になります。
+        </p>
+        <div style="display:flex;justify-content:space-around;">
+            <div class="sound" onClick="playSound('iikanjinowaon')"><span>A</span></div>
+            <div class="sound" onClick="playSound('hukyowaon')"><span>B</span></div>
+
+            <audio id="iikanjinowaon" src="../assets/sounds/iikanji.mp3"></audio>
+            <audio id="hukyowaon" src="../assets/sounds/hukyo.mp3"></audio>
+        </div>
+        <p>
+            Aは440Hz,550Hz,660Hzの4:5:6で表せる音、Bは409Hz,457Hz,509Hzというこれ以上簡単にならない音です。
+        </p>
+    </div>
+    <br>
+    <div class="section2">
+        <h2>(2)きれいな響きにするには</h2>
+        <p>
+            和音で、微妙に音程がずれているとうねりが発生します。
+        </p>
+        <div style="display:flex;justify-content:space-around;">
+            <img alt="Desmosを用いたうねりのグラフ" src="../assets/image/スクリーンショット%202025-01-30%20191623.png" style="width:40%">
+            <div>
+                <div class="sound" onClick="playSound('jundomiso')"><span>純正律のドミソ</span></div>
+                <div class="sound" onClick="playSound('heidomiso')"><span>平均律のドミソ</span></div>
+                <div class = "sound" onclick="playSoundo(440,445)"><span>うねりがわかりやすい音</span></div>
+                <audio id="jundomiso" src="../assets/sounds/junsei_domiso.mp3"></audio>
+                <audio id="heidomiso" src="../assets/sounds/heikin_domiso.mp3"></audio>
+            </div>
+        </div>
+        <p>
+            図であらわすとこんな感じです。(sin波の合成　で画像を検索すると出てくるかも)
+            ※図は40Hzと45.5Hzを合わせた波です。
+        </p>
+        <p>
+            チューナーは平均率の音程を指すので、DGA(ミラシ)は低めといわれる。(Dは-13.7セントで、チューナーの目盛りにある左側の三角はその時の音程。)
+            "うねりがわかりやすい音"のボタンは、440Hzと445Hzを同時に流しています。
+            同じ音量ですが、波がかさなって大きくなるところや小さくなるところが生まれています。
+        </p>
+
+        <br><br>
+        <h2>テスト</h2>
+        <div id="quiz-container">
+            <div class="question" id="question"></div>
+            <div class="options">
+                <button class="answerButton" onclick="checkAnswer(0)">Option 1</button>
+                <button class="answerButton" onclick="checkAnswer(1)">Option 2</button>
+                <button class="answerButton" onclick="checkAnswer(2)">Option 3</button>
+                <button class="answerButton" onclick="checkAnswer(3)">Option 4</button>
+            </div>
+        </div>
+        <div id="result"></div>
+    </div>
+    <a href="../index.html" class="btn btn-flat"><span>もどる</span></a>
+    <script>
+        function playSound(soundId) {
+            let audio = document.getElementById(soundId);
+            audio.play();
+        }
+        function playSoundo(frequency, secondFrequency = null) {
+            const context = new (window.AudioContext || window.webkitAudioContext)();
+            const oscillator1 = context.createOscillator();
+            oscillator1.type = 'sine';
+            oscillator1.frequency.setValueAtTime(frequency, context.currentTime);
+
+            if (secondFrequency) {
+                const oscillator2 = context.createOscillator();
+                oscillator2.type = 'sine';
+                oscillator2.frequency.setValueAtTime(secondFrequency, context.currentTime);
+                oscillator2.connect(context.destination);
+                oscillator2.start();
+                oscillator2.stop(context.currentTime + 2); // 1秒間音を鳴らす
+            }
+
+            oscillator1.connect(context.destination);
+            oscillator1.start();
+            oscillator1.stop(context.currentTime + 2); // 1秒間音を鳴らす
+        }
+    </script>
+    <script>
+        const quiz = [
+            {
+                question: "この中で、特に意識して低めのピッチに合わせる音はドイツ音名で何?(B♭で)",
+                options: ["A", "B", "C", "D"],
+                answer: 3
+            },
+            {
+                question: "人間の耳(脳)はどんな音(和音)を気持ちいいと認識する?",
+                options: ["高い音", "大きい音","ある特定の周波数の音(いくつも存在する)","周波数の比が簡単な整数比で表せる"],
+                answer: 3
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function loadQuestion() {
+            const q = quiz[currentQuestion];
+            document.getElementById('question').textContent = q.question;
+            const buttons = document.querySelectorAll('.options button');
+            buttons.forEach((button, index) => {
+                button.textContent = q.options[index];
+            });
+        }
+
+        function checkAnswer(selectedOption) {
+            const q = quiz[currentQuestion];
+            if (selectedOption === q.answer) {
+                document.getElementById('result').textContent = "正解！";
+            } else {
+                document.getElementById('result').textContent = "不正解...";
+            }
+            currentQuestion++;
+            if (currentQuestion < quiz.length) {
+                loadQuestion();
+            } else {
+                document.getElementById('quiz-container').style.display = 'none';
+                document.getElementById('result').textContent += " 終了！";
+            }
+        }
+
+        window.onload = loadQuestion;
+    </script>
+</main>
+</body>
+</html>
